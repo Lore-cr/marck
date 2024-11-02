@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Amor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .page {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            color: rgba(244, 240, 240, 0.905);
+        }
+        .active {
+            display: block;
+        }
+        .images img {
+            width: 30%;
+            margin: 10px;
+            transition: transform 0.3s, opacity 0.3s;
+            border: 5px solid #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .nav-buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background-color: #ff5e5e;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #ff3030;
+        }
+        .rectangle {
+            background-color: rgba(255, 94, 94, 0.9); 
+            padding: 20px;
+            border-radius: 10px; 
+            margin: 20px auto;
+            width: fit-content; 
+        }
+        .rectangle-text {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Efectos de entrada para cada página */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #page1 {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #page2 {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        #page3 {
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        
+        #page1 .images img:hover {
+            transform: scale(1.1) rotate(5deg); 
+        }
+
+        #page2 .images img:hover {
+            transform: scale(1.1) translateY(-10px); 
+        }
+
+        #page3 .images img:hover {
+            transform: scale(1.1) skew(5deg); 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pagina 1 -->
+    <div id="page1" class="page active" style="background-image: url('https://i.pinimg.com/564x/93/00/0a/93000a273dd7422fbc5d221d816c512d.jpg');">
+        <h1>Te amo feliz aniversario amor </h1> <!-- Cambia este texto -->
+        <div class="images">
+            <a href="https://youtu.be/CHtRzABrLl8?si=Yyt2ejGUpqP2q3Gr5" target="_blank">
+                <img src="https://i.pinimg.com/236x/fc/f4/d8/fcf4d8bb17623683652678b0f407b0ab.jpg" alt="Imagen 1">
+            </a>
+            <a href="https://youtu.be/ZMXpK_ein5M?si=JoQLVn5ZJhYXrfYc" target="_blank">
+                <img src="https://i.pinimg.com/236x/5d/c3/99/5dc399e81a22160e4d7dd958064b6d10.jpg" alt="Imagen 2">
+            </a>
+            <a href="https://youtu.be/Y_kzjPkfUwQ?si=mhUMaUpT6EHNlTQI" target="_blank">
+                <img src="https://i.pinimg.com/236x/78/b9/b9/78b9b90a9c781cef7359618621e8bd24.jpg" alt="Imagen 3">
+            </a>
+        </div>
+    </div>
+
+    <!-- Pagina 2 -->
+    <div id="page2" class="page" style="background-image: url('https://i.pinimg.com/236x/c3/9e/cc/c39ecce567995c199086eca4db631ae8.jpg');">
+        <h1>Toca las imagenes </h1> <!-- Cambia este texto -->
+        <div class="images">
+            <a href="https://youtu.be/wTZ7A-h8yTs?si=W_SOL8Eu03foPTdl" target="_blank">
+                <img src="https://i.pinimg.com/236x/5a/81/4a/5a814a194ff949bb0bceddf5950d4fe1.jpg" alt="Imagen 1">
+            </a>
+            <a href="https://youtu.be/mwpOBBI52fo?si=tKH2gVahE7lGw5wO" target="_blank">
+                <img src="https://i.pinimg.com/236x/e1/c7/81/e1c781dd0056aef2c9a85904b3965e84.jpg" alt="Imagen 2">
+            </a>
+            <a href="https://youtu.be/tdTrighgsw8?si=q_qqAk7FIFgzQR54" target="_blank">
+                <img src="https://i.pinimg.com/564x/7b/62/ed/7b62ed94a1c6f6996aaed65df123509d.jpg" alt="Imagen 3">
+            </a>
+        </div>
+    </div>
+
+    <!-- Pagina 3 -->
+    <div id="page3" class="page" style="background-image: url('https://i.pinimg.com/564x/0d/87/a9/0d87a9896eeed7890591c6263730ca45.jpg');">
+        <h1>Te amo mundos </h1> <!-- Cambia este texto -->
+        <div class="images">
+            <a href="https://youtu.be/gXUzSNg6uI8?si=85cUqXQ8XESleHNP" target="_blank">
+                <img src="https://i.pinimg.com/236x/77/b2/0e/77b20e846fbecb568c2ba2af77252fc7.jpg" alt="Imagen 1">
+            </a>
+            <a href="https://youtu.be/2ZXEYCctZOI?si=Jawybi_bKC2R4vaO" target="_blank">
+                <img src="https://i.pinimg.com/236x/12/1d/e3/121de308914fd7ae7b220b9d98f0ea43.jpg" alt="Imagen 2">
+            </a>
+            <a href="https://youtu.be/CBQhozaKBJ0?si=NhE_Epn0j04i8HS" target="_blank">
+                <img src="https://i.pinimg.com/564x/43/64/5f/43645f10b9a2ac0f670f7b0521f3513c.jpg" alt="Imagen 3">
+            </a>
+        </div>
+        <div class="rectangle">
+            <div class="rectangle-text">"Siempre te amaré con todo mi corazón,y con mi vida gracias por todo amor"</div>
+        </div>
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="nav-buttons">
+        <button onclick="showPage(1)">Página 1</button>
+        <button onclick="showPage(2)">Página 2</button>
+        <button onclick="showPage(3)">Página 3</button>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach((page, index) => {
+                page.classList.remove('active');
+                if (index === pageNumber - 1) {
+                    page.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
